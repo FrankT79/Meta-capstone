@@ -1,0 +1,46 @@
+h3{
+    color: #F4CE14;
+}
+
+.linksBar{
+   
+    list-style: none;
+    gap: 1rem;
+    
+}
+
+footer{
+    margin-top: 1rem;
+    background-color:  #495e57;
+}
+
+
+.linksBar li a{
+    text-decoration: none;
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    height: 100%;
+    
+   
+    
+    align-items: center;
+      
+   
+}
+
+.linksBar li a:hover{
+    background-color: #495E57;
+    color: white;
+}
+
+.adContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+div{
+    display: inline;
+}
