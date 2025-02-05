@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import BookingForm from './components/BookingForm'
 import Footer from './components/Footer'
 
-import './App.css'
+
 
 function App() {
   
