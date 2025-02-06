@@ -1,11 +1,14 @@
-.navbar{
+
+nav ul{
+    
     display: flex;
     list-style: none;
     gap: 1rem;
     justify-content: flex-end;
+    margin-right: 1rem;
 }
 
-.navbar li a{
+nav ul li a{
     text-decoration: none;
     font-family: "Karla", serif;
     font-optical-sizing: auto;
@@ -21,8 +24,67 @@
    
 }
 
-.navbar li a:hover{
+nav ul li a:hover{
     background-color: #495E57;
     color: white;
 }
 
+nav img{
+    display: block;
+}
+
+#closeNav{
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#openNav{
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    nav ul{
+        z-index: 10;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #495E57;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        transition: 1s;
+        margin: 0;
+        padding: 0;
+        transform: translateY(-100%);
+    }
+    .responsiveBar{
+        transform: none;
+        background-color: white;
+    }
+
+    #openNav{
+        display: block;
+        margin-right: 1rem;
+    }
+
+    #closeNav{
+        display: block;
+        color: white;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        margin-right: 2rem;
+    }
+  }

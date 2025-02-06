@@ -1,6 +1,11 @@
  header {
+ 
     display: flex;
     justify-content: space-between;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-top: 1rem;
+    align-items: flex-end;
+  }
+
+  header img{
+    margin-left: 1rem;
   }

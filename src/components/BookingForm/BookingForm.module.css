@@ -1,3 +1,9 @@
+.container{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h1{
     margin-top: 10rem;
     margin-bottom: 4rem;
@@ -53,19 +59,26 @@ form {
 }
 
 .formContainer img{
-    justify-self: center;
+    justify-self: right;
+    border-radius: 16px;
+    box-shadow:5px 5px 5px #495e57;
 }
 
-button {
+#submitbtn {
    color: #495e57;
    background-color: #F4CE14;
    border-radius: 16px;
    border: none;
-   box-shadow: 2px 2px 5px black;
+   box-shadow: 2px 2px 5px #495e57;
    padding: 0.5rem;
    font-weight: bold;
    margin-top: auto;
    margin-bottom: auto;
+
+}
+
+button:hover{
+    transform: scale(1.05);
 
 }
 
@@ -75,6 +88,10 @@ input{
     box-shadow: inset;
     padding: 0.25rem;
     font-size: 1.5rem;
+    width: 25ch;
+}
+#people{
+    accent-color: #495e57;
 }
 
 textarea{
@@ -83,6 +100,7 @@ textarea{
     box-shadow: inset;
     padding: 0.25rem;
     font-size: 1.5rem;
+    width: 25ch;
 }
 
 
@@ -111,5 +129,8 @@ textarea{
         grid-template-columns: auto;
 
 
+    }
+    .formContainer img{
+        justify-self: center;
     }
 }
