@@ -3,13 +3,19 @@ h3{
 }
 
 .linksBar{
-   
+    
+    padding-left: 0;
     list-style: none;
-    gap: 1rem;
+    
     
 }
 
 footer{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 1rem;
     background-color:  #495e57;
 }
@@ -21,26 +27,37 @@ footer{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    color: black;
+    color: white;
     height: 100%;
-    
-   
-    
     align-items: center;
-      
-   
 }
 
 .linksBar li a:hover{
     background-color: #495E57;
-    color: white;
+    color: #F4CE14;
 }
 
 .adContainer{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
+    color: white;
 }
 
 div{
     display: inline;
+}
+
+.slinks img{
+    height: 1rem;
+    
+    margin-right: 1rem;
+}
+
+@media screen and(max-width: 1000px) {
+    footer{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+
+        
+    }
 }

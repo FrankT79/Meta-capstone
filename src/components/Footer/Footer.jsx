@@ -18,11 +18,10 @@ function Footer() {
           <li><a href="#Order Online">Order Online</a></li>
           <li><a href="#Login">Login</a></li>
         </ul>
-        
       </div>
       <div>
         <h3>Contact</h3>
-          <div className={styles.adContainer}>
+        <div className={styles.adContainer}>
           <div>
             <p>Address:</p>
             <p>Phone:</p>
@@ -33,12 +32,9 @@ function Footer() {
             <p>00887-8854-552</p>
             <p>littlelemon@chicago.com</p>
           </div>
-          </div>
-                    
-          
-       
+        </div>
       </div>
-      <div>
+      <div className={styles.slinks}>
         <h3>Social media links</h3>
         <img src="./src/assets/facebookIcon.png" alt="" />
         <img src="./src/assets/instaIcon.png" alt="" />
