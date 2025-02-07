@@ -14,10 +14,10 @@
 }
 
 .aboutimage img:nth-child(1){
-    width: 300px;
+    width: 400px;
     position: absolute;
     padding-top: 2rem;
-    margin-left: 15rem;
+    justify-self: right;
 }
 
 .aboutimage img:nth-child(2){

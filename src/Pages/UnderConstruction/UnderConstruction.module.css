@@ -1,0 +1,21 @@
+.constructContainer{
+    display: grid;
+    gap: 2rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    justify-content: center;
+    height: 30svh;
+}
+
+.underTitle{
+    display: block;
+    color: green;
+    margin: 0;
+    padding: 0;
+}
+.secondTitle{
+    display: block;
+    color: green;
+    margin: 0;
+    padding: 0;
+}
