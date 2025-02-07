@@ -1,0 +1,41 @@
+.testimonial{
+    display: grid;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    background-color: #495E57;
+}
+.testimonial >h2{
+    display: inline-block;
+    justify-self: center;
+    color: #F5F5F5;
+}
+.testcontainer{
+    max-width: 1100px;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.testcard{
+    min-width: 18ch;
+    padding: 0.3rem;
+    border: 2px solid black;
+    border-radius: 16px;
+    background-color: #F5F5F5 ;
+}
+.revname{
+    display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+    .testcontainer{
+        gap: 0.5rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+     
+ }

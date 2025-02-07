@@ -1,0 +1,72 @@
+.container{
+    display: flex;
+    max-width: 1100px;
+    justify-self: center;
+    gap: 2rem;
+   
+}
+
+.bodycontainer{
+    display: grid;
+    max-width: 1100px;
+    justify-self: center;
+}
+.titlemain{
+   padding-bottom: 2rem;
+    
+    max-width: 1100px;
+}
+
+.maintitle{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    box-shadow: 2px 2px 5px #495e57;
+    max-width: 30ch;
+    min-width: 20ch;
+    border-radius: 16px;
+    justify-content: space-between;
+    
+
+}
+.card img{
+    max-width: 100%;
+    border-radius: 16px;
+}
+.title{
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+.price{
+    display: inline-block;
+    font-weight: bold;
+    color: orange;
+    margin-right: 0.5rem;
+}
+.titleContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.description{
+    margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+   .container{
+    width: 100svw;
+    overflow-x: auto;
+    gap: 1rem;
+    margin-left: 1rem;
+   }
+   .maintitle{
+    display: inline-block;
+    margin: 0;
+    padding-left: 1rem;
+}
+    
+}

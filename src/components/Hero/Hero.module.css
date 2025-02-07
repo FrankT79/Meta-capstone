@@ -1,0 +1,63 @@
+.container{
+    
+    background-color: #495E57;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    margin-bottom: 5rem;
+    
+}
+
+.lemon{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    color: #f4cf15;
+}
+.chicago{
+    color: white;
+}
+
+.textpart{
+    
+    max-width: 25ch;
+    
+}
+
+.textpart p{
+    margin-bottom: 2rem;
+}
+
+.textpart a{
+    text-decoration: none;
+    border: #f4cf15;
+    background-color: #f4cf15;
+    padding: 0.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    color: #495E57;
+}
+.imagepart{
+    display: grid;
+    position: relative;
+    width: 100%;
+    justify-content: right;
+}
+.imagepart img{
+    position: absolute;;
+    max-width: 300px;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    justify-self: center;
+    border-radius: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    .imagepart{
+    display: none;
+    }
+    
+     
+ }

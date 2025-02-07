@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import Header from './components/Header/Header'
-import BookingForm from './components/BookingForm/BookingForm'
-import Footer from './components/Footer/Footer'
+import Home from './Pages/Home/Home'
+import Booking from './Pages/Booking/Booking'
 
 
 
@@ -9,11 +8,7 @@ function App() {
   
 
   return (
-    <>
-    <Header></Header>
-    <BookingForm></BookingForm>
-    <Footer></Footer>
-    </>
+    <Home/>
   )
 }
 

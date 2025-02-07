@@ -61,6 +61,7 @@ nav img{
         height: 100%;
         width: 100%;
         background-color: #495E57;
+        color: white;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
@@ -69,9 +70,17 @@ nav img{
         padding: 0;
         transform: translateY(-100%);
     }
-    .responsiveBar{
+    nav ul li a{
+        color: white;
+        display: block;
+    }
+    nav ul li a:active{
+        background-color: #495E57;
+        color:#f4cf15;
+    }
+    .responsiveBar{      
         transform: none;
-        background-color: white;
+        
     }
 
     #openNav{
