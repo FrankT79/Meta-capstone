@@ -7,12 +7,13 @@ import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
+    
   
 
   return (
     <>
     <Routes>
-      <Route path="/Reservation" element={<Booking></Booking>}/>
+      <Route path="/Reservation" element={<Booking ></Booking>}/>
       
       </Routes>
     <UnderConstruction/>

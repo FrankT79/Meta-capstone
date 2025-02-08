@@ -92,6 +92,8 @@ input{
 }
 #people{
     accent-color: #495e57;
+   margin-left: 0;
+    display: block;
 }
 
 textarea{

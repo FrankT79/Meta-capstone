@@ -2,26 +2,21 @@ import React from 'react'
 import styles from './BookingForm.module.css'
 import Select from 'react-select'
 
-function BookingForm(props) {
- 
+function BookingForm() {
+  const[guests, setGuests] = React.useState(2);
   const options = [
     { value: 'birthday', label: 'Birthday' },
     { value: 'Anniversary', label: 'Anniversary' },
     { value: 'engagement', label: 'Engagement' }
   ]
-  
 
-  const[date, setDate] = React.useState("");
-  const[time, setTime] = React.useState("");
-  const[guests, setGuests] = React.useState(2);
-  const[occasion, setOccasion] = React.useState("");
-  const[firstName, setFirstName] = React.useState("feri");
-  const[lastName, setLastName] = React.useState("");
-  const[email, setEmail] = React.useState("");
-  const[phone, setPhone] = React.useState("");
-  const[comment, setComment] = React.useState("");
-
-  console.log(firstName)
+  const resTime = [
+    { value: '17:00', label: '17:00' },
+    { value: '18:00', label: '18:00' },
+    { value: '19:00', label: '19:00' },
+    { value: '20:00', label: '20:00' },
+    { value: '21:00', label: '21:00' },
+  ]
 
   return (
     <main>
@@ -31,11 +26,11 @@ function BookingForm(props) {
       <form action="submit">
         <div>
         <label htmlFor="date" className={styles.blocky}>Date *</label>
-        <input type="date" id='date' name='date' placeholder='date' value={date} onChange={setDate} />
+        <input type="date" id='date' name='date' placeholder='date' />
         </div>
         <div>
             <label htmlFor="time" className={styles.blocky}>Time *</label>
-            <Select options={props.resTime}  value={time} onChange={(e)=> setTime(e.target.value)}/>
+            <Select options={resTime} defaultValue={resTime[0]}/>
         </div>
         <div className={styles.bob}>
           <label htmlFor="people" >People *</label>
@@ -45,28 +40,28 @@ function BookingForm(props) {
         </div>
         <div>
           <label htmlFor="occasion" className={styles.blocky}>Occasion *</label>
-          <Select options={options} value={occasion} onChange={setOccasion}/>
+          <Select options={options} />
         </div>
         
         <div>
           <label htmlFor="firstName" className={styles.blocky}>First Name *</label>
-          <input type="text" id='firstName' name='firstName' placeholder='First Name' value={firstName} onChange={(e)=>setFirstName(e.target.value)}/>
+          <input type="text" id='firstName' name='firstName' placeholder='First Name' />
         </div>
         <div>
           <label htmlFor="lastName" className={styles.blocky}>Last Name *</label>
-          <input type="text" id='lastName' name='lastName' placeholder='Last Name' value={lastName} onChange={setLastName}/>
+          <input type="text" id='lastName' name='lastName' placeholder='Last Name' />
         </div>
         <div>
           <label htmlFor="email" className={styles.blocky}>Email *</label>
-          <input type="email" id='email' name='email' value={email} onChange={setEmail}/>
+          <input type="email" id='email' name='email'/>
         </div>
         <div>
           <label htmlFor="phone" className={styles.blocky}>Phone *</label>
-          <input type="phone" id='phone' name='phone' value={phone} onChange={setPhone}/>
+          <input type="phone" id='phone' name='phone'/>
         </div>
         <div>
           <label htmlFor="comments" className={styles.blocky}>Comments (optional)</label>
-          <textarea id='comments' name='comments' rows={4} value={comment} onChange={setComment}/>
+          <textarea id='comments' name='comments' rows={4} />
         </div>
         <button type='submit' id={styles.submitbtn}>Book Table</button>
       </form>
