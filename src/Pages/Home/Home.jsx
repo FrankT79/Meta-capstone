@@ -14,12 +14,12 @@ function Home() {
 
   return (
     <>
-    <Header></Header>
+    
     <Hero></Hero>
     <Card></Card>
     <Testimonials></Testimonials>
     <About></About>
-    <Footer></Footer>
+    
     </>
   )
   

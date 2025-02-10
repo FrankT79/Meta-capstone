@@ -5,10 +5,10 @@ nav ul{
     list-style: none;
     gap: 1rem;
     justify-content: flex-end;
-    margin-right: 1rem;
+    /*margin-right: 1rem;*/
 }
 
-nav ul li a{
+nav .links{
     text-decoration: none;
     font-family: "Karla", serif;
     font-optical-sizing: auto;
@@ -24,13 +24,14 @@ nav ul li a{
    
 }
 
-nav ul li a:hover{
+nav .links:hover{
     background-color: #495E57;
     color: white;
 }
 
 nav img{
     display: block;
+    align-self: top;
 }
 
 #closeNav{
@@ -70,11 +71,13 @@ nav img{
         padding: 0;
         transform: translateY(-100%);
     }
-    nav ul li a{
+    nav .links{
         color: white;
         display: block;
+        height: auto;
+        gap: 2rem;
     }
-    nav ul li a:active{
+    nav .links:hover{
         background-color: #495E57;
         color:#f4cf15;
     }
@@ -86,6 +89,7 @@ nav img{
     #openNav{
         display: block;
         margin-right: 1rem;
+        
     }
 
     #closeNav{

@@ -13,11 +13,11 @@ function Booking(props) {
 
   return (
     <>
-    <Header></Header>
+    
     <BookingForm  availableTimes={props.availableTimes}
                   dispatchOnDateChange={props.dispatchOnDateChange}
                   submitData={props.submitData}></BookingForm>
-    <Footer></Footer>
+    
     </>
   )
 }

@@ -1,56 +1,29 @@
 import { useState } from 'react'
 import React from 'react'
 import Home from './Pages/Home/Home'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import Booking from './Pages/Booking/Booking'
 import ConfirmedBooking from './components/ConfirmedBooking'
 import UnderConstruction from './Pages/UnderConstruction/UnderConstruction'
 import { Route, Routes, useNavigate } from 'react-router-dom'
+import { FetchAPI, submitAPI } from './Api/FetchAPI'
 
 
 function App() {
 
-  const seededRandom = function (seed) {
-    var m = 2**35 - 31;
-    var a = 185852;
-    var s = seed % m;
-    return function () {
-        return (s = s * a % m) / m;
-    };
-}
-
-
-
-  const fetchAPI = function(date){
-    let result = [];
-    let random = seededRandom(date.getDate());
-
-    for(let i = 17; i <= 23; i++) {
-        if(random() < 0.5) {
-            result.push(i + ':00');
-        }
-        if(random() > 0.5) {
-            result.push(i + ':30');
-        }
-    }
-    return result;
-};
-const submitAPI = function(formData) {
-    return true;
-};
-
-
 const updateTimes = (availableTimes, date) => {
-  const response = fetchAPI(new Date(date));
+  const response = FetchAPI(new Date(date));
   return response.length !== 0 ? response : availableTimes;
 };
 
 const initializeTimes = (initialAvailableTimes) => [
   ...initialAvailableTimes,
-  ...fetchAPI(new Date()),
+  ...FetchAPI(new Date()),
 ];
 
 
-  const [state, dispatchOnDateChange] = React.useReducer(
+  const [availableTimes, dispatchOnDateChange] = React.useReducer(
     updateTimes,
     [],
     initializeTimes
@@ -73,13 +46,23 @@ const initializeTimes = (initialAvailableTimes) => [
 
   return (
     <>
+    <Header/>
+    <main>
     <Routes>
-      <Route path="/Reservation" element={<Booking availableTimes = {state}  dispatchOnDateChange={dispatchOnDateChange}
+      <Route path="/Reservation" element={<Booking availableTimes = {availableTimes}  dispatchOnDateChange={dispatchOnDateChange}
                   submitData={submitData}></Booking>}/>
       <Route path="/confirmedBooking" element={<ConfirmedBooking></ConfirmedBooking>}/>
+      <Route path="/" element={<Home></Home>}/>
+      <Route path="/about" element={<UnderConstruction></UnderConstruction>}/>
+      <Route path="/menu" element={<UnderConstruction></UnderConstruction>}/>
+      <Route path="/order_online" element={<UnderConstruction></UnderConstruction>}/>
+      <Route path="/login" element={<UnderConstruction></UnderConstruction>}/>
+
       </Routes>
-    <UnderConstruction/>
-    </>
+      </main>
+      <Footer></Footer>
+      </>
+    
   )
 }
 

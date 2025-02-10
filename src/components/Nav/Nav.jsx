@@ -16,17 +16,22 @@ function Nav() {
       else setResponsive("");
     }
 
+  const closeNav = ()=>{
+    setResponsive("");
+  }
+
   return (
     
     <nav >
         <ul  className={responsive}>
           <button id={styles.closeNav} onClick={opencloseNav}><img src="./src/assets/x-icon2.svg" alt="X icon"  width={16} height={16} /></button>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Menu">Menu</a></li>
-            <Link to="/Reservation">Reservation</Link>
-            <li><a href="#Order Online">Order Online</a></li>
-            <li><a href="#Login">Login</a></li>
+          <Link to="/" className={styles.links} onClick={closeNav}>Home</Link>
+          <Link to="/about" className={styles.links} onClick={closeNav}>About</Link>
+          <Link to="/menu" className={styles.links} onClick={closeNav}>Menu</Link>
+          <Link to="/Reservation" className={styles.links} onClick={closeNav}>Reservation</Link>
+          <Link to="/order_online" className={styles.links} onClick={closeNav}>Order Online</Link>
+          <Link to="/login" className={styles.links} onClick={closeNav}>Login</Link>
+            
         </ul>
         <button id={styles.openNav} onClick={opencloseNav}><img src="./src/assets/menu-icon.svg" alt="menu icon"  width={16} height={16} color='green' /></button>
     </nav>
