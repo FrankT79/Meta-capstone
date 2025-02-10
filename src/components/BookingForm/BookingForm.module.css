@@ -90,6 +90,14 @@ input{
     font-size: 1.5rem;
     width: 25ch;
 }
+select{
+    border-radius: 4px;
+    border: 1px solid #abb8b3;
+    box-shadow: inset;
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    width: 25ch; 
+}
 #people{
     accent-color: #495e57;
    margin-left: 0;
