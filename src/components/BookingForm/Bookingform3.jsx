@@ -1,18 +1,28 @@
 import React from 'react'
 import styles from './BookingForm.module.css'
-import Select from 'react-select'
+import * as Yup from 'yup';
+import { useFormik } from "formik";
 
 function BookingForm(props) {
- 
-  const options = [
-    { value: 'birthday', label: 'Birthday' },
-    { value: 'Anniversary', label: 'Anniversary' },
-    { value: 'engagement', label: 'Engagement' }
-  ]
 
-  const options2 = [
+    const options2 = [
     'Other', 'Birthday','Anniversary', 'Engagement' 
   ]
+ 
+    const formik = useFormik({
+        initialValues: {date: "", time: "", guests: 2, occasion: options2[0], firstName:"", lastName: "", email:"", phone: "", comment:""},
+        onSubmit: (values) => submit(values),
+        validationSchema: Yup.object({
+            date: Yup.date("Pls chose date"),
+                lastName: Yup.string().trim().required("Required"),
+                phone: Yup.number().required("Required"),
+          firstName: Yup.string().trim().required("Required"), 
+          email: Yup.string().email("Invalid email address").required("Required"), 
+          
+          comment: Yup.string().min(25,  "Must be at least 25 characters").required("Required")}),
+      });
+
+  
 
   const optionfield = options2.map(option => <option key={option}>{option}</option>)
   const resTimes = props.availableTimes.map(item =><option key ={item}>{item}</option>)
@@ -63,7 +73,7 @@ const handleBlur = (e)=>{
       <div className={styles.container}>
       <h1>BOOKING</h1>
       <div className={styles.formContainer}>
-      <form action="submit" onSubmit={handleSubmit}>
+      <form action="submit" onSubmit={formik.handleSubmit}>
         <div>
         <label htmlFor="date" className={styles.blocky}>Date *</label>
         <input type="date" id='date' name='date' placeholder='date' value={date} onChange={handleChange} required/>
@@ -87,11 +97,15 @@ const handleBlur = (e)=>{
           {optionfield}
           </select>
         </div>
+
+        <div isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
+                  <label htmlFor="firstName" className={styles.blocky}  required>First Name *</label>
+                  <input type="text" id='firstName'  placeholder='First Name' 
+                  name="firstName"
+                  {...formik.getFieldProps("firstName")}/>
+                </div>
+       
         
-        <div>
-          <label htmlFor="firstName" className={styles.blocky}  required>First Name *</label>
-          <input type="text" id='firstName' name='firstName' placeholder='First Name' value={firstName} onChange={(e)=>setFirstName(e.target.value)} onBlur={handleBlur} required/>
-        </div>
         <h3 className={warning}>Please provide your name</h3>
         <div>
           <label htmlFor="lastName" className={styles.blocky}  required>Last Name *</label>

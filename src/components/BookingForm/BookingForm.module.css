@@ -1,3 +1,12 @@
+.nowarning{
+    display: none;
+}
+
+.warning{
+    display: block;
+    color: red;
+}
+
 .container{
     max-width: 1300px;
     margin-left: auto;

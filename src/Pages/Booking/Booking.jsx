@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
-import BookingForm from '../../components/BookingForm/BookingForm'
+import BookingForm from '../../components/BookingForm/Bookingform'
 import Footer from '../../components/Footer/Footer'
 import { useNavigate } from "react-router-dom";
 
