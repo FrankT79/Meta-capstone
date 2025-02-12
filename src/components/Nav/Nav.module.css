@@ -1,6 +1,6 @@
 /*<li><a href="#Reservations">Reservations</a></li>*/
 nav ul{
-    
+    padding-right: 1rem;
     display: flex;
     list-style: none;
     gap: 1rem;
@@ -90,6 +90,7 @@ nav img{
         display: block;
         margin-right: 1rem;
         
+        
     }
 
     #closeNav{
@@ -98,6 +99,6 @@ nav img{
         position: fixed;
         top: 1rem;
         right: 1rem;
-        margin-right: 2rem;
+        
     }
   }

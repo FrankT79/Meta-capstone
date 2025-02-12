@@ -19,7 +19,6 @@ function Home() {
     <Card></Card>
     <Testimonials></Testimonials>
     <About></About>
-    
     </>
   )
   

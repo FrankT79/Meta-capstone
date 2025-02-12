@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css'
+import { Link} from 'react-router-dom'
 
 function Footer() {
   return (
@@ -12,12 +13,12 @@ function Footer() {
             <h3>Links</h3>
           
             <ul className={styles.linksBar}>
-              <li><a href="#Home">Home</a></li>
-              <li><a href="#About">About</a></li>
-              <li><a href="#Menu">Menu</a></li>
-              <li><a href="#Reservations">Reservations</a></li>
-              <li><a href="#Order Online">Order Online</a></li>
-              <li><a href="#Login">Login</a></li>
+            <Link to="/" className={styles.links} >Home</Link>
+          <Link to="/about" className={styles.links} >About</Link>
+          <Link to="/menu" className={styles.links} >Menu</Link>
+          <Link to="/Reservation" className={styles.links} >Reservation</Link>
+          <Link to="/order_online" className={styles.links} >Order Online</Link>
+          <Link to="/login" className={styles.links} >Login</Link>
             </ul>
         </div>
       </div>

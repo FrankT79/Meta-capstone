@@ -1,4 +1,5 @@
 footer{
+    box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
     display: flex;
@@ -12,12 +13,13 @@ footer{
     flex: 1;
     display: flex;
     gap: 3rem;
+    
 }
 .bigbox > div:nth-child(1){
     flex: 1;
 }
 .bigbox > div:nth-child(2){
-    flex: 1.2;
+    flex: 1;
 }
 
 
@@ -31,11 +33,13 @@ h3{
 .linksBar{
     padding-left: 0;
     list-style: none;
+    
 }
 
 
 
-.linksBar li a{
+.linksBar .links{
+    display: grid;
     text-decoration: none;
     font-family: "Karla", serif;
     font-optical-sizing: auto;
@@ -53,7 +57,9 @@ h3{
 
 .adContainer{
     color: white;
+    
 }
+
 
 .slinks img{
     height: 1rem;

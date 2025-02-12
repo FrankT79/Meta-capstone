@@ -7,6 +7,7 @@
 }
 
 .bodycontainer{
+    box-sizing: border-box;
     display: grid;
     max-width: 1100px;
     justify-self: center;
@@ -58,10 +59,15 @@
 
 @media only screen and (max-width: 600px) {
    .container{
+    box-sizing: border-box;
     width: 100svw;
     overflow-x: auto;
     gap: 1rem;
-    margin-left: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+
+    
    }
    .maintitle{
     display: inline-block;

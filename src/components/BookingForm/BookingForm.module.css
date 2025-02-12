@@ -68,7 +68,8 @@ form {
 }
 
 .formContainer img{
-    justify-self: right;
+    justify-self: center;
+    align-self: center;
     border-radius: 16px;
     box-shadow:5px 5px 5px #495e57;
 }
