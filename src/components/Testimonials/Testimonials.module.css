@@ -8,6 +8,8 @@
     margin-bottom: 1rem;
 }
 .testimonial >h2{
+    font-family: "Markazi Text", serif;
+    font-size: 40px;
     display: inline-block;
     justify-self: center;
     color: #F5F5F5;
@@ -25,19 +27,24 @@
 .testcard{
     min-width: 18ch;
     padding: 0.3rem;
-    
+    font-family: "Karla", serif;
     border-radius: 16px;
     background-color: #F5F5F5 ;
+}
+.testcard h3{
+    color: black;
 }
 .revname{
     display: inline-block;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
     .testcontainer{
         gap: 0.5rem;
-        grid-template-columns: repeat(2,1fr);
+        overflow-x: auto;
         padding: 1rem;
+        justify-content: left;
+        
     }
     
      

@@ -1,24 +1,15 @@
 import React from 'react'
 import styles from './BookingForm.module.css'
-import Select from 'react-select'
+
 
 function BookingForm(props) {
- 
-  const options = [
-    { value: 'birthday', label: 'Birthday' },
-    { value: 'Anniversary', label: 'Anniversary' },
-    { value: 'engagement', label: 'Engagement' }
-  ]
 
-  const options2 = [
-    'Other', 'Birthday','Anniversary', 'Engagement' 
-  ]
+
+
+  const options2 = ['Other', 'Birthday','Anniversary', 'Engagement']
 
   const optionfield = options2.map(option => <option key={option}>{option}</option>)
   const resTimes = props.availableTimes.map(item =><option key ={item}>{item}</option>)
-
- 
-  
 
   const[date, setDate] = React.useState("");
   const[time, setTime] = React.useState("");
@@ -32,25 +23,24 @@ function BookingForm(props) {
 
   const handleSubmit= (e)=>{
     e.preventDefault();
-    
     props.submitData(date, time, guests, occasion, firstName, lastName, email, phone, comment);
   }
-  
+
   const handleChange = (e)=>{
     setDate(e.target.value)
     props.dispatchOnDateChange(e.target.value)
   }
 
-  const getIsFormValid = () => { 
+  const getIsFormValid = () => {
     return (
       date&&
       firstName &&
       lastName&&
       email&&
       phone
-      ); 
-  }; 
-let warning = styles.nowarning;  
+      );
+  };
+let warning = styles.nowarning;
 const handleBlur = (e)=>{
   if(e.target.value == ""){
     warning = styles.warning;
@@ -58,10 +48,10 @@ const handleBlur = (e)=>{
 }
 
   return (
-    <main>
-      
+    <main className={styles.general}>
+
       <div className={styles.container}>
-      <h1>BOOKING</h1>
+      <h1>TABLE BOOKING</h1>
       <div className={styles.formContainer}>
       <form action="submit" onSubmit={handleSubmit} data-testid ="theform">
         <div>
@@ -73,13 +63,13 @@ const handleBlur = (e)=>{
             <select id='time' value={time} onChange={(e)=>setTime(e.target.value)}  required>
           {resTimes}
           </select>
-           
+
         </div>
         <div className={styles.bob}>
           <label htmlFor="people" >People *</label>
           <h4>{guests}</h4>
          <input type="range" id={styles.people} name='people' min={1} max={12} value={guests} onChange={(e)=>setGuests(e.target.value)}  required/>
-          
+
         </div>
         <div>
           <label htmlFor="occasion" className={styles.blocky}>Occasion</label>
@@ -87,12 +77,12 @@ const handleBlur = (e)=>{
           {optionfield}
           </select>
         </div>
-        
+
         <div>
           <label htmlFor="firstName" className={styles.blocky}  >First Name *</label>
           <input type="text" id='firstName' name='firstName' placeholder='First Name' value={firstName} onChange={(e)=>setFirstName(e.target.value)} onBlur={handleBlur} required/>
         </div>
-        <h3 className={warning}>Please provide your name</h3>
+        
         <div>
           <label htmlFor="lastName" className={styles.blocky}  >Last Name *</label>
           <input type="text" id='lastName' name='lastName' placeholder='Last Name' value={lastName} onChange={(e)=> setLastName(e.target.value)}  required/>
@@ -111,11 +101,12 @@ const handleBlur = (e)=>{
         </div>
         <button type='submit' id={styles.submitbtn} aria-label='On Click' disabled={!getIsFormValid()} data-testid=  "submit-button" >Book Table</button>
       </form>
-      <img src="./src/assets/restauranfood.jpg" alt="picture of restaurant food" width={300}/>
+      <img src="./src/assets/bookingfull.jpg" alt="picture of restaurant" width={500} className={styles.full}/>
+      <img src="./src/assets/bookinghalf.jpg" alt="picture of restaurant" width={300} className={styles.half}/>
       </div>
       </div>
     </main>
-    
+
   )
 }
 

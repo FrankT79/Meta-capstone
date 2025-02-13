@@ -17,6 +17,8 @@
 }
 .chicago{
     color: white;
+    font-family: "Markazi Text", serif;
+    font-size: 2rem;
 }
 
 .textpart{
@@ -27,18 +29,28 @@
 
 .textpart p{
     margin-bottom: 2rem;
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white
 }
 
-.textpart a{
+.resbtn{
     text-decoration: none;
     border: #f4cf15;
     background-color: #f4cf15;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 16px;
     margin-bottom: 2rem;
     display: inline-block;
     color: #495E57;
+    font-weight: bold;
+    font-family: "Markazi Text", serif;
+    font-size: 2rem;
+    box-shadow: 2px 2px 2px rgb(37, 28, 28);
 }
+
 .imagepart{
     display: grid;
     position: relative;
@@ -47,7 +59,7 @@
 }
 .imagepart img{
     position: absolute;;
-    max-width: 300px;
+    max-width: 400px;
     margin-top: 2rem;
     margin-right: 3rem;
     justify-self: center;

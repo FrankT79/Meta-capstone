@@ -1,11 +1,12 @@
-.nowarning{
-    display: none;
+.general{
+
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: black
 }
 
-.warning{
-    display: block;
-    color: red;
-}
 
 .container{
     max-width: 1300px;
@@ -14,6 +15,11 @@
 }
 
 h1{
+    font-family: "Markazi Text", serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #495e57;
+    font-style: normal;
     margin-top: 10rem;
     margin-bottom: 4rem;
     padding-left: 2rem;
@@ -21,25 +27,20 @@ h1{
 
 
 form {
-    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     align-items: center;
-    
-   
 }
 .blocky{
     display: block;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     font-size: 1.5rem;
-    
 
 }
 
 .bob{
-    
     display: inline;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
@@ -64,7 +65,6 @@ form {
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    
 }
 
 .formContainer img{
@@ -111,7 +111,7 @@ select{
     box-shadow: inset;
     padding: 0.25rem;
     font-size: 1.5rem;
-    width: 25ch; 
+    width: 25ch;
 }
 #people{
     accent-color: #495e57;
@@ -128,12 +128,14 @@ textarea{
     width: 25ch;
 }
 
+.half{
+    display: none;
+}
 
 @media screen and (max-width: 1100px) {
     form{
         grid-template-columns: auto;
-
-    } 
+    }
     .formContainer *{
         font-size: 1rem;
     }
@@ -142,6 +144,8 @@ textarea{
         margin-bottom: 2rem;
         padding-left: 2rem;
     }
+    .full{display: none;}
+    .half{display: block;}
 }
 
 
@@ -149,7 +153,7 @@ textarea{
     form{
         grid-template-columns: auto;
 
-    } 
+    }
     .formContainer{
         grid-template-columns: auto;
 

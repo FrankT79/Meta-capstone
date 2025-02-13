@@ -30,7 +30,7 @@ function Footer() {
            <div>
             <p>Lonesome road 65, Chicago</p>
             <p>00887-8854-552</p>
-            <p>littlelemon@chicago.com</p>
+            <p>llelemon@gmail.com</p>
           </div>
         </div>
       </div>

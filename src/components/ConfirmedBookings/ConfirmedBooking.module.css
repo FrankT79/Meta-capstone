@@ -1,0 +1,10 @@
+.confirmation{
+    font-family: "Markazi Text", serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #495e57;
+    font-style: normal;
+    justify-self: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}

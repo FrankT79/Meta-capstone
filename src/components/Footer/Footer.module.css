@@ -1,4 +1,8 @@
 footer{
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
@@ -74,6 +78,17 @@ h3{
     .bigbox{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 1rem;
+        gap: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    footer {
+      display: grid;
+    }
+    .bigbox{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        font-size: 0.85rem;
     }
   }
