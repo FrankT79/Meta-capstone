@@ -1,5 +1,6 @@
 {
   "name": "meta-capstone",
+  "homepage":"https://FrankT79.github.io/Meta-capstone", 
   "private": true,
   "version": "0.0.0",
   "type": "module",

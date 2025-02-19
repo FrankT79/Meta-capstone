@@ -1,3 +1,9 @@
+Project created with Vite.
+
+NPM RUN DEV TO RUN APP
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
