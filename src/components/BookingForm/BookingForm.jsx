@@ -101,7 +101,7 @@ const handleBlur = (e)=>{
         </div>
         <button type='submit' id={styles.submitbtn} aria-label='On Click' disabled={!getIsFormValid()} data-testid=  "submit-button" >Book Table</button>
       </form>
-      <img src="./src/assets/bookingfull.jpg" alt="picture of restaurant" width={500} className={styles.full}/>
+      <img src="../src/assets/bookingfull.jpg" alt="picture of restaurant" width={500} className={styles.full}/>
       <img src="./src/assets/bookinghalf.jpg" alt="picture of restaurant" width={300} className={styles.half}/>
       </div>
       </div>
